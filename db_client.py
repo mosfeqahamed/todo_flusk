@@ -1,7 +1,9 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # loads variables from .env
+# Load .env file only if running locally (not on Render)
+if os.getenv('RENDER') is None:
+    load_dotenv()
 
 DB_USERNAME = os.getenv('DB_USERNAME')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
