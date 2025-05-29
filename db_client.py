@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-# Load .env file only if running locally (not on Render)
+
 if os.getenv('RENDER') is None:
     load_dotenv()
 
